@@ -6,7 +6,7 @@ double resultWater(int a, double *b, double *c);
 void output(double a, double b);
 
 int main(void) {
-    int n; // колличество стаканов
+    int n;
     double kapli;
     double molekul;
     input(&n);
@@ -27,10 +27,9 @@ double resultWater(int a, double *b, double *c) {
     double stakan = 249.5;
     *b = a * (stakan / massKapli);
     *c = *b * (massKapli / massMolekul);
-    *b = *b / 1000;
     return 0;
 }
 
 void output(double a, double b) {
-    printf("%e %.3e", a, b);
+    printf("%.0f %.3e", a, b);
 }
